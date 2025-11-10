@@ -38,3 +38,23 @@ pip install python-dotenv
 
 3. Configura tus variables de entorno:
     - Crea un archivo llamado .env en la raíz del proyecto con el siguiente contenido:
+```bash
+OPENAI_API_KEY=tu_clave_de_openai
+```
+
+## 📁 Estructura del Proyecto
+
+La organización del proyecto es la siguiente:
+
+```
+LangChain-LLM-AREP/
+├── README.md
+├── src/
+│   └── LangChain.ipynb
+```
+Descripción de archivos:
+- README.md: Documentación general del proyecto.
+- LangChain.ipynb: Notebook principal con el código de ejemplo.
+
+## ⚙️ Configuración Rápida
+
