@@ -14,7 +14,6 @@ Para ejecutar este proyecto necesitarás:
 1. Una cuenta en OpenAI con una API Key válida.
 2. Un entorno de trabajo como Google Colab o Python 3.8+ instalado localmente.
 3. Las siguientes bibliotecas de Python:
-
 - langchain
 - langchain[openai]
 - python-dotenv
