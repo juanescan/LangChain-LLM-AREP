@@ -27,9 +27,10 @@ Sigue estos pasos para configurar el entorno del proyecto:
  ```python
     git clone https://github.com/juanescan/LangChain-LLM-AREP.git
     cd LangChain-LLM-AREP
-
+    ```
 2. Instala las dependencias necesarias:
  ```python
     pip install langchain
     pip install -qU "langchain[openai]"
     pip install python-dotenv
+    ```
