@@ -1,1 +1,18 @@
-.env/
+# Ignorar archivo de variables de entorno
+.env
+
+# Ignorar entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos de configuración o dependencias temporales
+__pycache__/
+*.pyc
+
+# Archivos de Jupyter
+.ipynb_checkpoints/
+
+# Configuración de IDEs
+.vscode/
+.idea/
