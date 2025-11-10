@@ -1,4 +1,4 @@
-# Ignorar archivo de variables de entorno
+# Ignorar archivo de variables de entorno hola
 .env
 
 # Ignorar entornos virtuales
