@@ -58,3 +58,84 @@ Descripción de archivos:
 
 ## ⚙️ Configuración Rápida
 
+1. Clona el repositorio si trabajas de forma local:
+
+ ```bash
+git clone https://github.com/juanescan/LangChain-LLM-AREP.git
+cd LangChain-LLM-AREP
+```
+2. Instala las dependencias:
+
+ ```bash
+pip install langchain openai
+```
+3. Configura tu API key en Colab (opcional):
+
+ ```bash
+import getpass, os
+os.environ["OPENAI_API_KEY"] = getpass.getpass("Enter your OpenAI API key: ")
+```
+
+## 💻 Uso
+
+1. Abre el notebook LangChain.ipynb.
+
+2. Ejecuta las celdas paso a paso para:
+- Inicializar el modelo de lenguaje.
+- Crear y personalizar un prompt template.
+- Traducir texto del inglés al idioma que elijas.
+
+3. Ejemplo básico de código:
+
+ ```bash
+from langchain.chat_models import init_chat_model
+from langchain_core.messages import HumanMessage, SystemMessage
+from langchain_core.prompts import ChatPromptTemplate
+
+# Inicializar modelo
+model = init_chat_model("gpt-4", model_provider="openai")
+
+# Crear plantilla del prompt
+system_template = "Translate the following from English into {language}"
+prompt_template = ChatPromptTemplate.from_messages([
+    ("system", system_template),
+    ("user", "{text}")
+])
+
+# Traducir texto
+prompt = prompt_template.invoke({"language": "Italian", "text": "good morning"})
+response = model.invoke(prompt)
+print(response.content)  # Output: "Buongiorno!"
+
+```
+
+## 🌍 Ejemplos de Traducción
+
+- Inglés → Italiano:
+
+ ```bash
+prompt = prompt_template.invoke({"language": "Italian", "text": "good morning"})
+response = model.invoke(prompt)
+print(response.content)  # Output: "Buongiorno!"
+```
+
+- Inglés → Francés:
+
+ ```bash
+prompt = prompt_template.invoke({"language": "French", "text": "good night"})
+response = model.invoke(prompt)
+print(response.content)  # Output: "Bonne nuit!"
+```
+
+## 🖼️ Capturas de Pantalla
+
+![IA](/imagenes/1.png)
+
+![IA](/imagenes/2.png)
+
+![IA](/imagenes/3.png)
+
+![IA](/imagenes/4.png)
+
+## 👨‍💻 Autor
+- Juan Esteban Cancelado - *AREP* *LangChain-LLM-AREP* - [juanescan](https://github.com/juanescan)
